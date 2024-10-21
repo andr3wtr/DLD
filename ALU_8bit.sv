@@ -8,13 +8,13 @@ always @(*) begin
 case(op)
 3'b000: out = a + b;
   // add in your code to make the ALU works as shown
-3'b001:          ; // sub
-3'b010:          ; // and
-3'b011:          ; // or
-3'b100:          ; // xor
-3'b101:          ; // not
-3'b110:          ; // shl
-3'b111: ; // shr
+3'b001: out = a - b; // sub
+3'b010: out = a & b; // and
+3'b011: out = a | b; // or
+3'b100: out = a ^ b; // xor
+3'b101: out = ~a; // not
+3'b110: out = a << b[2:0]; // shl
+3'b111: out = a >> b[2:0]; // shr
 default: out = 0;
 endcase
 end
