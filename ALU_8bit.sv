@@ -13,8 +13,8 @@ case(op)
 3'b011: out = a | b; // or
 3'b100: out = a ^ b; // xor
 3'b101: out = ~a; // not
-3'b110: out = a << b[2:0]; // shl
-3'b111: out = a >> b[2:0]; // shr
+3'b110: out = a << 1; // shl
+3'b111: out = a >> 1; // shr
 default: out = 0;
 endcase
 end
